@@ -81,9 +81,9 @@ AC_CHECK_FUNCS([floor gettimeofday pow sqrt])
 # compilation
 case "$host" in
   *-apple-darwin* | *-apple-macos*)
-    CFLAGS="$CFLAGS -DOS_MACOSX"
-    CXXFLAGS="$CXXFLAGS -DOS_MACOSX"
-    CPPFLAGS="$CPPFLAGS -DOS_MACOSX"
+    CFLAGS="$CFLAGS -DOS_MACOSX  -lstdc++"
+    CXXFLAGS="$CXXFLAGS -DOS_MACOSX  -lstdc++"
+    CPPFLAGS="$CPPFLAGS -DOS_MACOSX  -lstdc++"
     CC="clang++"
     CPP="clang++ -E"
     CXX="clang++"

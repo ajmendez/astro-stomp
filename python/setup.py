@@ -12,7 +12,7 @@ from distutils.core import setup, Extension
 # make sure we compile in the python-specific
 # methods to the stomp classes
 
-addflags='-DWITH_PYTHON'
+addflags='-DWITH_PYTHON -lstdc++'
 if 'CPPFLAGS' in os.environ:
     os.environ['CPPFLAGS'] +=  ' ' +addflags
 else:
@@ -45,6 +45,7 @@ tab="""
 setupOptional("gflags")
 envPrepend(PATH,${PRODUCT_DIR}/bin)
 envPrepend(LD_LIBRARY_PATH,${PRODUCT_DIR}/lib)
+envPrepend(DYLD_LIBRARY_PATH,${PRODUCT_DIR}/lib)
 envPrepend(LIBRARY_PATH,${PRODUCT_DIR}/lib)
 envPrepend(C_INCLUDE_PATH,${PRODUCT_DIR}/include)
 envPrepend(CPATH,${PRODUCT_DIR}/include)
