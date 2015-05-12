@@ -1,3 +1,20 @@
+
+*.pyc
+config.*
+libtool
+config.guess
+*Makefile
+
+examples/.deps/
+ltmain.sh
+python/build/
+python/ups/
+s2/.deps/
+s2omp/.deps/
+stomp-1.0.pc
+stomp/.deps/
+test-driver
+    
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -23,7 +40,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
 
 
 

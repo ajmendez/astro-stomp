@@ -4,3 +4,14 @@ First run the autogen.sh script
 ./configure [options]
 make
 make install
+
+
+
+
+# mac install example:
+./autogen.sh
+./configure --with-gflags-dir=/usr/local/Cellar/gflags/2.0 --prefix=/Users/ajmendez/.local/ --enable-static --with-gnu-ld
+make 
+make install
+cd python
+python setup.py install
